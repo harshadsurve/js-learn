@@ -1,3 +1,6 @@
+//Data types in JavaScript define the data type that a variable can store. 
+// JavaScript includes primitive and non-primitive data types
+
 "use strict";// treat all js code as newer version
 
 //alert("hello")// we are using nodejs, not browser
