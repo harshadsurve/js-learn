@@ -1,5 +1,6 @@
 const accountId = 12345
 /*
+const is a keyword used to declare a variable that cannot be reassigned a new value
  The const declaration declares block-scoped local variables.
  The value of a constant can't be changed through reassignment using the assignment operator
  */
