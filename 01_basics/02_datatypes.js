@@ -7,12 +7,12 @@
 
 console.log(3+3)
 // code readablitty should be high
-console.log("harshad")
+console.log("harshad") 
 
-let name="harshad"
-let age=18
-let isLoggedIn= false
-let state;
+let name="harshad" // string
+let age=18 //number
+let isLoggedIn= false // boolean
+let state; // undefined
 // number => 2 to power 53
 // bigint =>The BigInt type is a numeric primitive in JavaScript that can represent integers with arbitrary magnitude
 // string =>""
