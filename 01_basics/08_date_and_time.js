@@ -18,6 +18,7 @@ let myDate = new Date()
 let myCreateddate = new Date("09-03-2024")
 // console.log(myCreateddate.toLocaleString());
 
+//  timestamp value directly using the getTime() and setTime() methods.
 let myTimeStamp = Date.now()
 // console.log(myTimeStamp); //  milliseconds since the midnight at the beginning of January 1, 1970.
 // console.logy(mCreateddate.getTime());
