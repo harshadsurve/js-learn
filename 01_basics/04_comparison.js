@@ -1,3 +1,8 @@
+/*
+JavaScript comparison operators are used to check if a condition is true or false. 
+The comparison operators are used in logical expressions to determine their 
+equality or differences in variables or values. 
+*/
 // console.log(2>1);
 // console.log(2>=1);
 // console.log(2<1);
