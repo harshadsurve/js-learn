@@ -1,3 +1,8 @@
+/* JavaScript variables can be converted to a new variable and another data type:
+
+By the use of a JavaScript function
+Automatically by JavaScript itself
+*/
 //let score=33
 //let score ="33"
 //let score ="33abc"
