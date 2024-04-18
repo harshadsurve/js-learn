@@ -1,3 +1,6 @@
+ // Variables are used to store data in JavaScript. Variables are used to store reusable values. 
+//  The values of the variables are allocated using the assignment operator(“=”).
+
 const accountId = 12345
 /*
 const is a keyword used to declare a variable that cannot be reassigned a new value
