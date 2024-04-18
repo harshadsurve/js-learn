@@ -59,7 +59,7 @@ let myObj={
  
  // Stack (Primitive)  copy of varible , Heap(Non-Primitive) Reference:
 
- //stack:
+ //stack: copy of varible
  let myname = "harshad"
  
  let anothername= myname
@@ -68,7 +68,7 @@ let myObj={
  console.log(myname);
  console.log(anothername);
 
- // heap:
+ // heap: Reference
  let userone={
     email:"user@googel.com",
     upi:"user@ybl"
@@ -80,3 +80,4 @@ let myObj={
 
  console.log(userone.email);
  console.log(usertwo.email);
+ 
