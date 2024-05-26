@@ -36,9 +36,9 @@ console.log(real_another_array);
 ]
 */
 
-console.log(Array.isArray("harshad")); //
-console.log(Array.from("harshad")); //
-console.log(Array.from({name:"harshad"})); //
+console.log(Array.isArray("harshad")); //False
+console.log(Array.from("harshad")); //['h','a','r','s','h','a','d']
+console.log(Array.from({name:"harshad"})); // []
 
 let score1 = 100
 let score2 = 200
