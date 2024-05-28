@@ -60,6 +60,16 @@ const balance = 1000
 const isUserLoggedIn1 = true
 const debitcard = true
 
-if (is) {
-    
+if (isUserLoggedIn1 && debitcard) { // -> all condition is true than in  code &&-> And
+    {
+        console.log("allow to buy course");
+    }
 }
+
+const loggedInFromGoogle = false
+const loggedInFromEmail = true
+
+if (loggedInFromGoogle || loggedInFromEmail) { // ||-> for OR  only one condition is true than in code
+    console.log("user logged in");
+}
+
