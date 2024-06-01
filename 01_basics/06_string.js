@@ -21,7 +21,8 @@ const newString = gameName.substring(0,4)//The substring() method of String valu
 console.log(newString); 
 
 const anotherString = gameName.slice(-7,4)
-//
+//The slice() method of String values extracts a section of this string and returns it as a new string, without modifying the original string.
+
 const newStringOne = "  harshad  "
 console.log(newStringOne);
 console.log(newStringOne.trim());
