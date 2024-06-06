@@ -36,6 +36,7 @@ console.log(real_another_array);
 ]
 */
 
+
 console.log(Array.isArray("harshad")); //False
 console.log(Array.from("harshad")); //['h','a','r','s','h','a','d']
 console.log(Array.from({name:"harshad"})); // []
