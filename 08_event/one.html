@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    
+    // document.getElementById('owl').onclick = function(){
+    //     alert("owl clicked")
+    // }
+
+    //    document.getElementById('owl').addEventListener('click',function (e) {
+    //    console.log(e);     
+    //   },false)
+     // attachEvent()
+    // jQuery - on
+
+    /* type-> 
+    Mouse events:
+Event Performed	              Event Handler	                       Description
+click	                        onclick	                    When mouse click on an element
+mouseover	                    onmouseover	                When the cursor of the mouse comes over the element
+mouseout	                    onmouseout	                When the cursor of the mouse leaves an element
+mousedown	                    onmousedown	                When the mouse button is pressed over the element
+mouseup	                        onmouseup	                When the mouse button is released over the element
+mousemove	                    onmousemove	                When the mouse movement takes place.
+
+Keyboard events:
+Event Performed	                Event Handler	                    Description
+Keydown & Keyup	               onkeydown & onkeyup	        When the user press and then release the key
+
+Form events:
+Event Performed	                Event Handler	                     Description
+focus	                           onfocus	                When the user focuses on an element
+submit	                           onsubmit	                When the user submits the form
+blur	                            onblur	                When the focus is away from a form element
+change	                           onchange              	When the user modifies or changes the value of a form element
+
+Window/Document events
+Event Performed	                Event Handler	                     Description
+load	                           onload	                When the browser finishes the loading of the page
+unload	                           onunload               	When the visitor leaves the current webpage, the browser unloads it
+resize	                           onresize	                When the visitor resizes the window of the browser*/
+
+/* timestamp -> The timeStamp event property returns the number of milliseconds from the document was finished loading until the specific event was created.
+Not all systems provide this information, therefore, timeStamp may be not available for all systems/events.
+Syntax
+event.timeStamp
+*/
+
+/* Preventeddefault -> The preventDefault() method is used to prevent the browser from executing the default action of the selected element. It can prevent the user from processing the request by clicking the link.
+Syntax:
+event.preventDefault()
+Parameters: It does not accept any parameter.
+The event is used to denote the event or action by the user in the response of which the method works.
+*/
+
+/* target->
+The target property returns the element where the event occured.
+The target property is read-only.
+The target property returns the element on which the event occurred, opposed to the currentTarget property, which returns the element whose event listener triggered the event.
+*/
+    //  toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    // Bubbling: When an event happens on a component, it first runs the event handler on it, then on its parent component, then all the way up on other ancestors’ components. By default, all event handles through this order from center component event to outermost component event.
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // }, true)
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked");
+    //     e.stopPropagation()
+    // }, true)
+    // 2. Capturing: It is the opposite of bubbling. The event handler is first on its parent component and then on the component where it was actually wanted to fire that event handler. In short, it means that the event is first captured by the outermost element and propagated to the inner elements. It is also called trickle down.
+
+
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     console.log("google clicked");
+    // }, false)
+   
+    
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target);
+        console.log(e.target.parentNode);
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+
+    
+        
+    })
+    
+    //removeIt.parentNode.removeChild(removeIt)
+</script>
+</html>
