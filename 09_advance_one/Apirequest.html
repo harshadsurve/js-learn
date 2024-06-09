@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub User Info</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <div id="container"></div>
+
+    <script>
+        // Create a div element
+        const div1 = document.createElement('div');
+        div1.style.textAlign = 'center';
+        div1.style.marginTop = '20px';
+        
+        // Create a button element
+        const button = document.createElement('button');
+        button.textContent = 'Get GitHub User Info';
+        button.style.padding = '10px 20px';
+        button.style.fontSize = '16px';
+        button.style.cursor = 'pointer';
+        
+        // Append the button to the div
+        div1.appendChild(button);
+        
+        // Append the div to the body
+        document.getElementById('container').appendChild(div1);
+        
+        // Add event listener to the button
+        button.addEventListener('click', function() {
+            const requestUrl = 'https://api.github.com/users/hiteshchoudhary';
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', requestUrl);
+            
+            xhr.onreadystatechange = function() {
+                console.log(xhr.readyState);
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    const data = JSON.parse(this.responseText);
+                    console.log(typeof data);
+                    console.log(data.followers);
+                    
+                    // Create an image element
+                    const img = document.createElement('img');
+                    img.src = data.avatar_url;
+                    img.alt = 'Profile Image';
+                    img.style.width = '150px';
+                    img.style.borderRadius = '50%';
+                    img.style.marginTop = '20px';
+                    
+                    // Create a paragraph element to display followers
+                    const followers = document.createElement('p');
+                    followers.textContent = `Followers: ${data.followers}`;
+                    followers.style.fontSize = '18px';
+                    followers.style.marginTop = '10px';
+                    
+                    // Append the image and followers count to the div
+                    div1.appendChild(img);
+                    div1.appendChild(followers);
+                }
+            }
+            
+            xhr.send();
+        });
+    </script>
+</body>
+</html>
