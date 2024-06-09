@@ -20,13 +20,12 @@ This method returns an interval ID which uniquely identifies the interval, so yo
 // setInterval(()=>{
 //     console.log("harshad",Date.now());
 // },2000)
-let date = Date.now();
+
 let saydate = function (str) {
        print.innerHTML += (str+ " ") 
-
 }
 let print=document.getElementById('print')
-let intervalid;
+let intervalid;   
 document.querySelector('#start').addEventListener('click',()=>{
  intervalid=setInterval(saydate,1000,"harshad")
 })
