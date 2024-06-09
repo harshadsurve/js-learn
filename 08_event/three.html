@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Chai aur js</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <h2 id="print"></h2>
+</body>
+<script>
+/* setInterval -> The setInterval() method, offered on the Window and WorkerGlobalScope interfaces, 
+repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
+This method returns an interval ID which uniquely identifies the interval, so you can remove it later by
+ calling clearInterval().
+ */
+// setInterval(()=>{
+//     console.log("harshad",Date.now());
+// },2000)
+let date = Date.now();
+let saydate = function (str) {
+       print.innerHTML += (str+ " ") 
+
+}
+let print=document.getElementById('print')
+let intervalid;
+document.querySelector('#start').addEventListener('click',()=>{
+ intervalid=setInterval(saydate,1000,"harshad")
+})
+document.querySelector('#stop').addEventListener('click',()=>{
+    clearInterval(intervalid)
+    print.innerHTML = "stopped";
+})
+</script>
+</html>
